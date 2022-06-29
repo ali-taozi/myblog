@@ -9,7 +9,7 @@ class AlbumInfo(models.Model):
     photo=models.ImageField('图片', upload_to='images/album', blank=True)
 
     def __str__(self):
-        return self.name
+        return str(self.id)
     class Meta:
         verbose_name='图片墙管理'
         verbose_name_plural='图片墙管理'

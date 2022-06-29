@@ -36,8 +36,8 @@ def detail(request,id,aId):
     tag=ArticleTag.objects.filter(user_id=id)
     user=MyUser.objects.filter(id=id).first()
     if request.method=='GET':
-        ats=ArticleInfo.objects.filter(user_id=id)
-        atags=ArticleInfo.objects.get(id=aId).artical_tag.all()
+        ats = ArticleInfo.objects.filter(id=aId).first()
+        atags = ArticleInfo.objects.get(id=aId).article_tag.all()
         cms=Comment.objects.filter(article_id=aId).order_by('-created')
         #添加阅读量
         if not request.session.get('reading'+str(id)+str(aId),''):
