@@ -1,6 +1,0 @@
-[client]
-database=blogd
-user=root
-password=Zmor5521
-host=127.0.0.1
-port=3306
