@@ -13,7 +13,7 @@ class ArticleTag(models.Model):
     user=models.ForeignKey(MyUser, verbose_name='用户', on_delete=models.CASCADE)    
 
     def __str__(self):
-        return self.name
+        return self.tag
     
     class Meta:
         verbose_name='博文分类'
